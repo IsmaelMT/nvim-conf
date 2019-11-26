@@ -1,0 +1,285 @@
+""""""""""""""""""""""""""""""
+" => MRU plugin
+""""""""""""""""""""""""""""""
+" let MRU_Max_Entries = 400
+" map <leader>f :MRU<CR>
+
+
+""""""""""""""""""""""""""""""
+" => YankStack
+""""""""""""""""""""""""""""""
+" nmap <c-p> <Plug>yankstack_substitute_older_paste
+" nmap <c-P> <Plug>yankstack_substitute_newer_paste
+
+
+""""""""""""""""""""""""""""""
+" => CTRL-P
+""""""""""""""""""""""""""""""
+let g:ctrlp_max_height = 30
+let g:ctrlp_custom_ignore = 'node_modules\|^\.DS_Store\|^\.git\|^\.coffee'
+
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Nerd Tree
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+let g:NERDTreeWinPos = "left"
+let NERDTreeIgnore = ['\.pyc$', '__pycache__']
+let g:NERDTreeWinSize=35
+nnoremap <F2> :NERDTreeToggle<cr>
+nnoremap <leader>nb :NERDTreeFromBookmark
+nnoremap <leader>nf :NERDTreeFind<cr>
+
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => vim-multiple-cursors
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+let g:multi_cursor_next_key="\<C-s>"
+
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => surround.vim config
+" Annotate strings with gettext http://amix.dk/blog/post/19678
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+vmap Si S(i_<esc>f)
+au FileType mako vmap Si S"i${ _(<esc>2f"a) }<esc>
+
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Syntastic (syntax checker)
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Python
+" let g:syntastic_python_checkers=['pyflakes']
+
+" " Javascript
+" let g:syntastic_javascript_checkers = ['jshint']
+
+" " Go
+" let g:syntastic_auto_loc_list = 1
+" let g:syntastic_go_checkers = ['go', 'golint', 'errcheck']
+
+" " Custom CoffeeScript SyntasticCheck
+" func! SyntasticCheckCoffeescript()
+"     let l:filename = substitute(expand("%:p"), '\(\w\+\)\.coffee', '.coffee.\1.js', '')
+"     execute "tabedit " . l:filename
+"     execute "SyntasticCheck"
+"     execute "Errors"
+" endfunc
+" nnoremap <silent> <leader>c :call SyntasticCheckCoffeescript()<cr>
+
+" set statusline+=%#warningmsg#
+" set statusline+=%{SyntasticStatuslineFlag()}
+" set statusline+=%*
+
+" let g:syntastic_mode_map = {'mode': 'passive', 'active_filetypes': [], 'passive_filetypes': []}
+
+" let g:syntastic_javascript_checkers=['eslint']
+" let g:syntastic_always_populate_loc_list = 1
+" let g:syntastic_auto_loc_list = 1
+" let g:syntastic_check_on_open = 0
+" let g:syntastic_check_on_wq = 1
+
+" noremap sc :SyntasticCheck<CR>
+" noremap st :SyntasticToggleMode<CR>
+" noremap lc :lclose<CR>
+" noremap lo :lopen<CR>
+" noremap ln :lnext<CR>
+" noremap lp :lprevious<CR>
+
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Vimwiki configuration
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+let g:vimwiki_list = [{
+\ 'path': '~/vimwiki/', 
+\ 'path_html': '~/vimwiki_html/', 
+\ 'auto_export': 1,
+\ 'syntax': 'markdown', 'ext': '.md'}]
+
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Vim airline
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+let g:airline_powerline_fonts = 1
+let g:airline_theme='dracula'
+let g:airline_left_sep = "\uE0D2"
+let g:airline_right_sep = "\uE0D4"
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Fugitive
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+map <F5> :Gblame<cr>
+
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" vim-instant-markdown preview
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+map <leader>md :MarkdownPreview<CR>
+
+" " set to 1, nvim will open the preview window after entering the markdown buffer
+" default: 0
+let g:mkdp_auto_start = 0
+
+" set to 1, the nvim will auto close current preview window when change
+" from markdown buffer to another buffer
+" default: 1
+let g:mkdp_auto_close = 1
+
+" set to 1, the vim will refresh markdown when save the buffer or
+" leave from insert mode, default 0 is auto refresh markdown as you edit or
+" move the cursor
+" default: 0
+let g:mkdp_refresh_slow = 1
+
+" set to 1, the MarkdownPreview command can be use for all files,
+" by default it can be use in markdown file
+" default: 0
+let g:mkdp_command_for_global = 1
+
+" set to 1, preview server available to others in your network
+" by default, the server listens on localhost (127.0.0.1)
+" default: 0
+let g:mkdp_open_to_the_world = 0
+
+" use custom IP to open preview page
+" useful when you work in remote vim and preview on local browser
+" more detail see: https://github.com/iamcco/markdown-preview.nvim/pull/9
+" default empty
+let g:mkdp_open_ip = ''
+
+" specify browser to open preview page
+" default: ''
+let g:mkdp_browser = ''
+
+" set to 1, echo preview page url in command line when open preview page
+" default is 0
+let g:mkdp_echo_preview_url = 1
+
+" a custom vim function name to open preview page
+" this function will receive url as param
+" default is empty
+let g:mkdp_browserfunc = ''
+
+" options for markdown render
+" mkit: markdown-it options for render
+" katex: katex options for math
+" uml: markdown-it-plantuml options
+" maid: mermaid options
+" disable_sync_scroll: if disable sync scroll, default 0
+" sync_scroll_type: 'middle', 'top' or 'relative', default value is 'middle'
+"   middle: mean the cursor position alway show at the middle of the preview page
+"   top: mean the vim top viewport alway show at the top of the preview page
+"   relative: mean the cursor position alway show at the relative positon of the preview page
+" hide_yaml_meta: if hide yaml metadata, default is 1
+" sequence_diagrams: js-sequence-diagrams options
+let g:mkdp_preview_options = {
+    \ 'mkit': {},
+    \ 'katex': {},
+    \ 'uml': {},
+    \ 'maid': {},
+    \ 'disable_sync_scroll': 0,
+    \ 'sync_scroll_type': 'middle',
+    \ 'hide_yaml_meta': 1,
+    \ 'sequence_diagrams': {}
+    \ }
+
+" use a custom markdown style must be absolute path
+let g:mkdp_markdown_css = ''
+
+" use a custom highlight style must absolute path
+let g:mkdp_highlight_css = ''
+
+" use a custom port to start server or random for empty
+let g:mkdp_port = '8091'
+
+" preview page title
+" ${name} will be replace with the file name
+let g:mkdp_page_title = '「${name}」'
+
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Tagbar
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+nmap <F8> :TagbarToggle<CR>
+let g:autotagTagsFile="tags"
+
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Fzf
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"search project files
+nnoremap <leader>p :FZF<cr>
+"search project files by lines of code
+nnoremap <leader>o :Lines<cr>
+"search project files by tags (requirs ctags to be installed)
+nnoremap <leader>t :Tags<cr>
+"search all open files/buffers
+nnoremap <leader>r :Buffers<cr>
+
+"start a search query
+nnoremap <C-f> :Ag<cr>
+nmap <leader>f :Ag <C-R><C-W><CR>
+nnoremap <leader>F :Ag! <C-R><C-W><cr>
+nmap <leader>T :Tags <C-R><C-W><CR>
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" ALE
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+" In ~/.vim/vimrc, or somewhere similar.
+let g:ale_linters = {
+\   'javascript': ['eslint'],
+\   'python': ['flake8']
+\}
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Pythonsense
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+" TODO: fix the mappings
+" map <buffer> ac <Plug>(PythonsenseOuterClassTextObject)
+" map <buffer> ic <Plug>(PythonsenseInnerClassTextObject)
+" map <buffer> af <Plug>(PythonsenseOuterFunctionTextObject)
+" map <buffer> if <Plug>(PythonsenseInnerFunctionTextObject)
+" map <buffer> ad <Plug>(PythonsenseOuterDocStringTextObject)
+" map <buffer> id <Plug>(PythonsenseInnerDocStringTextObject)
+
+" map <buffer> ]] <Plug>(PythonsenseStartOfNextPythonClass)
+" map <buffer> ][ <Plug>(PythonsenseEndOfPythonClass)
+" map <buffer> [[ <Plug>(PythonsenseStartOfPythonClass)
+" map <buffer> [] <Plug>(PythonsenseEndOfPreviousPythonClass)
+" map <buffer> ]m <Plug>(PythonsenseStartOfNextPythonFunction)
+" map <buffer> ]M <Plug>(PythonsenseEndOfPythonFunction)
+" map <buffer> [m <Plug>(PythonsenseStartOfPythonFunction)
+" map <buffer> [M <Plug>(PythonsenseEndOfPreviousPythonFunction)
+
+" map <buffer> g: <Plug>(PythonsensePyWhere)
+
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" ctrlsf - Search and edit
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+nmap     <C-F>f <Plug>CtrlSFPrompt
+vmap     <C-F>f <Plug>CtrlSFVwordPath
+vmap     <C-F>F <Plug>CtrlSFVwordExec
+nmap     <C-F>n <Plug>CtrlSFCwordPath
+nmap     <C-F>p <Plug>CtrlSFPwordPath
+nnoremap <C-F>o :CtrlSFOpen<CR>
+nnoremap <C-F>t :CtrlSFToggle<CR>
+inoremap <C-F>t <Esc>:CtrlSFToggle<CR>
+
+let g:ctrlsf_default_view_mode = 'compact'
+let g:ctrlsf_ackprg = 'ag'
+
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Black 
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+let g:black_linelength = 120
+let g:black_virtualenv = '~/.local/share/nvim/black'
+nmap <C-b> :Black
+
+
+source ~/.config/nvim/vimrcs/coc.vim
