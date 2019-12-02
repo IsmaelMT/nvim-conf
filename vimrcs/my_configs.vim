@@ -61,4 +61,4 @@ colorscheme quantum
 set spelllang=en_us
 
 " Commands
-command! RpdbTrace :norm ofrom remote_pdb import RemotePdb<CR>RemotePdb('0.0.0.0', 4444).set_trace()
+command! RemotePdb :norm ofrom remote_pdb import RemotePdb<CR>RemotePdb('0.0.0.0', 4444).set_trace()
