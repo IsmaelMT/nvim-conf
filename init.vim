@@ -22,6 +22,8 @@ Plug 'tpope/vim-commentary'
 
 " Git plugin for vim
 Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-rhubarb'
+Plug 'airblade/vim-gitgutter'
 
 " Surrounding for vim
 " cs'" to change 'for "
@@ -31,6 +33,9 @@ Plug 'tpope/vim-surround'
 " Allow . to repeat command for surround, 
 " speedddating, unimpaired, vim-easyclip and vim-radical
 Plug 'tpope/vim-repeat'
+
+" Vim mappings
+Plug 'tpope/vim-unimpaired'
 
 " Maintain sessions with vim
 " Use :Obsess to start recording
@@ -60,9 +65,6 @@ Plug 'Xuyuanp/nerdtree-git-plugin'
 " https://github.com/majutsushi/tagbar
 Plug 'majutsushi/tagbar'
 
-" File search
-Plug 'kien/ctrlp.vim'
-
 " Color
 Plug 'kjssad/quantum.vim'
 Plug 'gkapfham/vim-vitamin-onec'
@@ -88,6 +90,13 @@ Plug 'psf/black'
 
 " Vim tabular
 Plug 'godlygeek/tabular'
+
+" Syntax highlighting
+Plug 'sheerun/vim-polyglot'
+
+" Text object for function arguments
+Plug 'vim-scripts/argtextobj.vim'
+
 
 " let Vundle manage Vundle, required
 call plug#end()

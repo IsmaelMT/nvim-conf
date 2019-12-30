@@ -1,11 +1,28 @@
 {
-  "coc.preferences.formatOnSaveFiletypes": ["python"],
-  "suggest.autoTrigger": "trigger",
-  "suggest.snippetIndicator": "►",
-  "python.linting.enabled": true,
-  "python.linting.flake8Enabled": true,
-  "python.linting.mypyEnabled": false,
-  "python.linting.pylintEnabled": false,
-  "python.linting.pydocstyleEnabled": false,
-  "python.formatting.provider": "off",
+  "coc": {
+    "preferences": {
+      "formatOnSaveFiletypes": ["python"],
+      "diagnostic": {
+        "displayByAle": true,
+        "enable": true
+      }
+    }
+  },
+  "suggest": {
+    "autoTrigger": "always",
+    "snippetIndicator": "►"
+  },
+  "python": {
+    "linting": {
+      "enabled": true,
+      "flake8Enabled": true,
+      "mypyEnabled": false,
+      "pylintEnabled": false,
+      "pydocstyleEnabled": false
+    },
+    "formatting": {
+      "provider": "black",
+      "blackArgs": ["-l", "120"]
+    }
+  }
 }

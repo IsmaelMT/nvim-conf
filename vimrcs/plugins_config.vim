@@ -1,4 +1,4 @@
-""""""""""""""""""""""""""""""
+"""""""""""""""""""""""""""""
 " => MRU plugin
 """"""""""""""""""""""""""""""
 " let MRU_Max_Entries = 400
@@ -10,13 +10,6 @@
 """"""""""""""""""""""""""""""
 " nmap <c-p> <Plug>yankstack_substitute_older_paste
 " nmap <c-P> <Plug>yankstack_substitute_newer_paste
-
-
-""""""""""""""""""""""""""""""
-" => CTRL-P
-""""""""""""""""""""""""""""""
-let g:ctrlp_max_height = 30
-let g:ctrlp_custom_ignore = 'node_modules\|^\.DS_Store\|^\.git\|^\.coffee'
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -45,55 +38,13 @@ au FileType mako vmap Si S"i${ _(<esc>2f"a) }<esc>
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => Syntastic (syntax checker)
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Python
-" let g:syntastic_python_checkers=['pyflakes']
-
-" " Javascript
-" let g:syntastic_javascript_checkers = ['jshint']
-
-" " Go
-" let g:syntastic_auto_loc_list = 1
-" let g:syntastic_go_checkers = ['go', 'golint', 'errcheck']
-
-" " Custom CoffeeScript SyntasticCheck
-" func! SyntasticCheckCoffeescript()
-"     let l:filename = substitute(expand("%:p"), '\(\w\+\)\.coffee', '.coffee.\1.js', '')
-"     execute "tabedit " . l:filename
-"     execute "SyntasticCheck"
-"     execute "Errors"
-" endfunc
-" nnoremap <silent> <leader>c :call SyntasticCheckCoffeescript()<cr>
-
-" set statusline+=%#warningmsg#
-" set statusline+=%{SyntasticStatuslineFlag()}
-" set statusline+=%*
-
-" let g:syntastic_mode_map = {'mode': 'passive', 'active_filetypes': [], 'passive_filetypes': []}
-
-" let g:syntastic_javascript_checkers=['eslint']
-" let g:syntastic_always_populate_loc_list = 1
-" let g:syntastic_auto_loc_list = 1
-" let g:syntastic_check_on_open = 0
-" let g:syntastic_check_on_wq = 1
-
-" noremap sc :SyntasticCheck<CR>
-" noremap st :SyntasticToggleMode<CR>
-" noremap lc :lclose<CR>
-" noremap lo :lopen<CR>
-" noremap ln :lnext<CR>
-" noremap lp :lprevious<CR>
-
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Vimwiki configuration
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:vimwiki_list = [{
 \ 'path': '~/vimwiki/', 
 \ 'path_html': '~/vimwiki_html/', 
 \ 'auto_export': 1,
-\ 'syntax': 'markdown', 'ext': '.md'}]
+\ 'syntax': 'markdown', 'ext': '.wiki'}]
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -281,5 +232,31 @@ let g:black_linelength = 120
 let g:black_virtualenv = '~/.local/share/nvim/black'
 nmap <C-b> :Black
 
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" COC 
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 source ~/.config/nvim/vimrcs/coc.vim
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" ALE 
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+" Load all plugins now.
+" Plugins need to be added to runtimepath before helptags can be generated.
+packloadall
+" Load all of the helptags now, after plugins have been loaded.
+" All messages and errors will be ignored.
+silent! helptags ALL
+
+nmap <silent> <C-k> <Plug>(ale_previous_wrap)
+nmap <silent> <C-j> <Plug>(ale_next_wrap)
+
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Tabular 
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+nmap <Leader>= :Tabularize /=<CR>
+vmap <Leader>= :Tabularize /=<CR>
+nmap <Leader>: :Tabularize /:\zs<CR>
+vmap <Leader>: :Tabularize /:\zs<CR>
