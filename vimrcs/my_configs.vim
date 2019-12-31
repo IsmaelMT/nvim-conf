@@ -42,7 +42,7 @@ noremap zz :IndentLinesToggle<CR>
 
 augroup SyntaxSettings
     autocmd!
-    autocmd BufNewFile,BufRead *.tsx set filetype=typescript
+    autocmd BufNewFile,BufRead *.tsx set filetype=typescript.tsx
 augroup END
 
 " Use <TAB> to select the popup menu:
