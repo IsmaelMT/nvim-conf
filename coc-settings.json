@@ -1,7 +1,7 @@
 {
   "coc": {
     "preferences": {
-      "formatOnSaveFiletypes": ["python"],
+      "formatOnSaveFiletypes": ["python", "json"],
       "diagnostic": {
         "displayByAle": true,
         "enable": true
@@ -10,7 +10,8 @@
   },
   "suggest": {
     "autoTrigger": "always",
-    "snippetIndicator": "►"
+    "snippetIndicator": "►",
+    "timeout": 500
   },
   "python": {
     "linting": {
@@ -23,6 +24,7 @@
     "formatting": {
       "provider": "black",
       "blackArgs": ["-l", "120"]
-    }
+    },
+    "pythonPath": "/usr/bin/python3.7"
   }
 }
