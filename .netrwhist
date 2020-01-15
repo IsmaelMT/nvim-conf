@@ -1,5 +1,8 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhistcnt =5
+let g:netrw_dirhistcnt =8
+let g:netrw_dirhist_8='/home/ismael.mendonca/.config/i3'
+let g:netrw_dirhist_7='/home/ismael.mendonca/.tmux'
+let g:netrw_dirhist_6='/home/ismael.mendonca/.config/gtk-3.0'
 let g:netrw_dirhist_5='/home/ismael.mendonca/travelperk/backend/travelperk/trips/models'
 let g:netrw_dirhist_4='/home/ismael.mendonca/.config/nvim/vimrcs'
 let g:netrw_dirhist_3='/home/ismael.mendonca/travelperk/backend/travelperk/trips/models'

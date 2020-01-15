@@ -21,6 +21,7 @@ let g:NERDTreeWinSize=35
 nnoremap <F2> :NERDTreeToggle<cr>
 nnoremap <leader>nb :NERDTreeFromBookmark
 nnoremap <leader>nf :NERDTreeFind<cr>
+map <leader>nr :NERDTreeFind<cr>
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""

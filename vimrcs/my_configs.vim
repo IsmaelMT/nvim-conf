@@ -32,7 +32,8 @@ inoremap <C-Down> <Esc>:m+<CR>
 "   autocmd ColorScheme * hi clear TabLineFill
 " augroup END
 
-" colorscheme afterglow
+let g:afterglow_blackout=1
+let g:afterglow_inherit_background=1
 
 " Indentlines
 let g:indentLine_enabled = 1
@@ -50,12 +51,13 @@ inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
 inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
 
 " Color
-set termguicolors       " enable true colors support
+" set termguicolors       " enable true colors support
 
 set background=dark     " dark theme
 " set background=light  " light theme
 
-colorscheme quantum
+" colorscheme quantum
+colorscheme afterglow
 
 " Spell
 set spelllang=en_us
@@ -66,3 +68,6 @@ command! Ipdb :norm oimport ipdb; ipdb.set_trace()
 
 " Mouse usage
 set mouse=a
+
+" Quickfix
+map <C-q> :copen<CR>

@@ -66,8 +66,11 @@ Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'majutsushi/tagbar'
 
 " Color
-Plug 'kjssad/quantum.vim'
-Plug 'gkapfham/vim-vitamin-onec'
+" Plug 'kjssad/quantum.vim'
+" Plug 'gkapfham/vim-vitamin-onec'
+Plug 'danilo-augusto/vim-afterglow' 
+Plug 'dylanaraps/wal.vim'
+Plug 'cocopon/iceberg.vim'
 
 " Command line finder
 Plug 'junegunn/fzf'
