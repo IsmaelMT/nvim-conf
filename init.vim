@@ -46,6 +46,7 @@ Plug 'tpope/vim-obsession'
 " And to see the markdown result use <Leader>md
 Plug 'vimwiki/vimwiki'
 Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app & yarn install'  }
+" Plug 'suan/vim-instant-markdown', {'for': 'markdown'}
 
 " Status line configuration
 Plug 'vim-airline/vim-airline'
@@ -64,6 +65,7 @@ Plug 'Xuyuanp/nerdtree-git-plugin'
 " Tagbar
 " https://github.com/majutsushi/tagbar
 Plug 'majutsushi/tagbar'
+Plug 'ludovicchabant/vim-gutentags'
 
 " Color
 " Plug 'kjssad/quantum.vim'
@@ -81,6 +83,8 @@ Plug 'dense-analysis/ale'
 
 " Python sense
 Plug 'jeetsukumaran/vim-pythonsense'
+" Plug 'dbsr/vimpy'
+Plug 'mgedmin/python-imports.vim'
 
 " Search and edit
 Plug 'dyng/ctrlsf.vim'

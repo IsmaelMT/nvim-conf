@@ -129,7 +129,7 @@ let g:coc_global_extensions = [
   \'coc-emoji', 'coc-eslint', 'coc-prettier',
   \'coc-tsserver', 'coc-tslint', 'coc-tslint-plugin',
   \'coc-css', 'coc-json', 'coc-yaml', 'coc-python',
-  \'coc-snippets'
+  \'coc-snippets', 'coc-html'
 \]
 
 inoremap <silent><expr> <TAB>

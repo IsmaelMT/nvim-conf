@@ -1,7 +1,7 @@
 {
   "coc": {
     "preferences": {
-      "formatOnSaveFiletypes": ["python", "json"],
+      "formatOnSaveFiletypes": ["python", "json", "css", "Markdown", "javascript", "javascriptreact", "typescript", "typescriptreact"],
       "diagnostic": {
         "displayByAle": true,
         "enable": true
@@ -16,9 +16,9 @@
   "python": {
     "linting": {
       "enabled": true,
-      "flake8Enabled": true,
+
       "mypyEnabled": false,
-      "pylintEnabled": false,
+
       "pydocstyleEnabled": false
     },
     "formatting": {
@@ -26,5 +26,8 @@
       "blackArgs": ["-l", "120"]
     },
     "pythonPath": "/usr/bin/python3.7"
+  },
+  "html": {
+    "enable": true
   }
 }
