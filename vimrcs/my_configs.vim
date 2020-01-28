@@ -25,6 +25,9 @@ nnoremap <C-Down> :m+<CR>
 inoremap <C-Up> <Esc>:m-2<CR>
 inoremap <C-Down> <Esc>:m+<CR>
 
+nnoremap <C-j> <PageDown>
+nnoremap <C-k> <C-D>
+
 " Overwrite colorscheme
 " augroup vimrc
 "   autocmd!

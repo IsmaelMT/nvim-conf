@@ -169,9 +169,9 @@ nnoremap <leader>t :Tags<cr>
 nnoremap <leader>r :Buffers<cr>
 
 "start a search query
-nnoremap <C-f> :Ag<cr>
-nmap <leader>f :Ag <C-R><C-W><CR>
-nnoremap <leader>F :Ag! <C-R><C-W><cr>
+nnoremap <C-s> :Ag<cr>
+nmap <C-s>s :Ag <C-R><C-W><CR>
+nnoremap <leader>S :Ag! <C-R><C-W><cr>
 nmap <leader>T :Tags <C-R><C-W><CR>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -212,14 +212,14 @@ let g:ale_linters = {
 " ctrlsf - Search and edit
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-nmap     <C-F>f <Plug>CtrlSFPrompt
-vmap     <C-F>f <Plug>CtrlSFVwordPath
-vmap     <C-F>F <Plug>CtrlSFVwordExec
-nmap     <C-F>n <Plug>CtrlSFCwordPath
-nmap     <C-F>p <Plug>CtrlSFPwordPath
-nnoremap <C-F>o :CtrlSFOpen<CR>
-nnoremap <C-F>t :CtrlSFToggle<CR>
-inoremap <C-F>t <Esc>:CtrlSFToggle<CR>
+nmap     <leader>f <Plug>CtrlSFPrompt
+vmap     <leader>f <Plug>CtrlSFVwordPath
+vmap     <leader>F <Plug>CtrlSFVwordExec
+nmap     <leader>fn <Plug>CtrlSFCwordPath
+nmap     <leader>fp <Plug>CtrlSFPwordPath
+nnoremap <leader>fo :CtrlSFOpen<CR>
+nnoremap <leader>ft :CtrlSFToggle<CR>
+inoremap <leader>ft <Esc>:CtrlSFToggle<CR>
 
 let g:ctrlsf_default_view_mode = 'compact'
 let g:ctrlsf_ackprg = 'ag'
@@ -231,7 +231,6 @@ let g:ctrlsf_ackprg = 'ag'
 
 let g:black_linelength = 120
 let g:black_virtualenv = '~/.local/share/nvim/black'
-nmap <C-b> :Black
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " COC 
