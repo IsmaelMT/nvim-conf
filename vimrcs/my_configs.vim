@@ -19,14 +19,28 @@ set shellpipe=>
 " cnoreabbrev Ack Ack!
 " nnoremap <Leader>a :Ack!<Space>
 
+" Disable arrows
+
+nnoremap <up>    <nop>
+nnoremap <down>  <nop>
+nnoremap <left>  <nop>
+nnoremap <right> <nop>
+inoremap <up>    <nop>
+inoremap <down>  <nop>
+inoremap <left>  <nop>
+inoremap <right> <nop>
+
 " Move lines
 nnoremap <C-Up> :m-2<CR>
 nnoremap <C-Down> :m+<CR>
 inoremap <C-Up> <Esc>:m-2<CR>
 inoremap <C-Down> <Esc>:m+<CR>
 
-nnoremap <C-j> <PageDown>
-nnoremap <C-k> <C-D>
+nnoremap J <C-d>
+nnoremap K <C-u>
+
+imap <C-h> <Left><Del>
+imap <C-l> <Del>
 
 " Overwrite colorscheme
 " augroup vimrc
