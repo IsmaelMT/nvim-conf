@@ -108,12 +108,6 @@ Plug 'vim-scripts/argtextobj.vim'
 " let Vundle manage Vundle, required
 call plug#end()
 
-" Move lines
-nnoremap <C-Up> :m-2<CR>
-nnoremap <C-Down> :m+<CR>
-inoremap <C-Up> <Esc>:m-2<CR>
-inoremap <C-Down> <Esc>:m+<CR>
-
 source ~/.config/nvim/vimrcs/basic.vim
 source ~/.config/nvim/vimrcs/my_configs.vim
 source ~/.config/nvim/vimrcs/extended.vim
