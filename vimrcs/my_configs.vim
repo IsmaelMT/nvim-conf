@@ -31,10 +31,10 @@ inoremap <left>  <nop>
 inoremap <right> <nop>
 
 " Move lines
-nnoremap <C-Up> :m-2<CR>
-nnoremap <C-Down> :m+<CR>
-inoremap <C-Up> <Esc>:m-2<CR>
-inoremap <C-Down> <Esc>:m+<CR>
+nnoremap <C-k> :m-2<CR>
+nnoremap <C-j> :m+<CR>
+inoremap <C-k> <Esc>:m-2<CR>
+inoremap <C-j> <Esc>:m+<CR>
 
 nnoremap J <C-d>
 nnoremap K <C-u>
