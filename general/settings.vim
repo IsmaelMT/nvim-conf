@@ -2,11 +2,6 @@
 " => General
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-colorscheme afterglow
-
-let g:afterglow_blackout=1
-let g:afterglow_inherit_background=1
-
 syntax enable                           " Enables syntax highlighing
 set hidden                              " Required to keep multiple buffers open multiple buffers
 set nowrap                              " Display long lines as just one line

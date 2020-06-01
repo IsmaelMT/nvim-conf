@@ -58,7 +58,6 @@ Plug 'ludovicchabant/vim-gutentags'
 " Color
 Plug 'danilo-augusto/vim-afterglow' 
 Plug 'dylanaraps/wal.vim'
-Plug 'cocopon/iceberg.vim'
 
 " Command line finder
 Plug 'junegunn/fzf'
@@ -99,13 +98,13 @@ Plug 'Yggdroot/indentLine'
 " let Vundle manage Vundle, required
 call plug#end()
 
-source ~/.config/nvim/vimrcs/settings.vim
+source ~/.config/nvim/themes/afterglow.vim
 source ~/.config/nvim/themes/airline.vim
-source ~/.config/nvim/vimrcs/mappings.vim
-source ~/.config/nvim/vimrcs/commands.vim
-source ~/.config/nvim/vimrcs/plugins_config.vim
-
+source ~/.config/nvim/general/settings.vim
+source ~/.config/nvim/general/mappings.vim
+source ~/.config/nvim/general/commands.vim
 
 " Plugins
-source ~/.config/nvim/vimrcs/coc.vim
-source ~/.config/nvim/vimrcs/plugins.vim
+source ~/.config/nvim/plugins/coc.vim
+source ~/.config/nvim/plugins/plugins_config.vim
+source ~/.config/nvim/plugins/plugins.vim
