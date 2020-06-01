@@ -48,14 +48,6 @@ let g:vimwiki_list = [{
 \ 'syntax': 'markdown', 'ext': '.wiki'}]
 
 
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Vim airline
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
-let g:airline_powerline_fonts = 1
-let g:airline_theme='dracula'
-let g:airline_left_sep = "\uE0D2"
-let g:airline_right_sep = "\uE0D4"
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Fugitive
@@ -232,11 +224,6 @@ let g:ctrlsf_ackprg = 'ag'
 let g:black_linelength = 120
 let g:black_virtualenv = '~/.local/share/nvim/black'
 
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" COC 
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
-source ~/.config/nvim/vimrcs/coc.vim
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " ALE 

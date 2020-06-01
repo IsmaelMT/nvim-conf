@@ -3,7 +3,7 @@
     "preferences": {
       "formatOnSaveFiletypes": ["python", "json", "css", "Markdown", "javascript", "javascriptreact", "typescript", "typescriptreact"],
       "diagnostic": {
-        "displayByAle": true,
+        "displayByAle": false,
         "enable": true
       }
     }
@@ -16,9 +16,8 @@
   "python": {
     "linting": {
       "enabled": true,
-
       "mypyEnabled": false,
-
+      "setLinter": "flake8",
       "pydocstyleEnabled": false
     },
     "formatting": {

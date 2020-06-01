@@ -62,6 +62,8 @@
   - Mapped to `<C-q>`
 - `<A-k>` Move line up
 - `<A-j>` Move line down
+- `ALT+hjkl` Resize split
+
 
 ## Search
 
@@ -107,6 +109,7 @@
 - `zg` add to dictionary
 - `]s` Move to the next mispelled word
 - `[s` Move to the previous mispelled word
+- `z=` List of alternatives
 
 
 ## Moving around
@@ -141,6 +144,11 @@
 
 - `gg` Beginning of the file
 - `G` End of the file
+
+## Buffer
+
+- `TAB` Next buffer
+- `SHIFT-TAB` Previous buffer
 
 ## Unimpaired
 
@@ -265,6 +273,11 @@
 - `:Tab /:\zs` Aligns the content after colon(:) without the colon(:)
   - Mapped to `<leader>:`
 - `:Tab /:` Aligns the colon(:) sign
+
+## python-imports
+
+- `<F3>` Import name
+- `<C-F3>` Import name here
 
 ## COC
 

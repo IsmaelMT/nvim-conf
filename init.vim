@@ -1,15 +1,3 @@
-set nocompatible            " Disable compatibility to old-time vi
-set showmatch               " Show matching brackets.
-set mouse=v                 " middle-click paste with mouse
-set hlsearch                " highlight search results
-set softtabstop=2           " see multiple spaces as tabstops so <BS> does the right thing
-set autoindent              " indent a new line the same amount as the line just typed
-set number                  " add line numbers
-set wildmode=longest,full   " get bash-like tab completions
-set cc=120                  " set an 120 column border for good coding style
-
-highlight clear SignColumn
-
 " set the runtime path to include Vundle and initialize
 call plug#begin('~/.config/nvim/bundle')
 
@@ -68,8 +56,6 @@ Plug 'majutsushi/tagbar'
 Plug 'ludovicchabant/vim-gutentags'
 
 " Color
-" Plug 'kjssad/quantum.vim'
-" Plug 'gkapfham/vim-vitamin-onec'
 Plug 'danilo-augusto/vim-afterglow' 
 Plug 'dylanaraps/wal.vim'
 Plug 'cocopon/iceberg.vim'
@@ -104,11 +90,22 @@ Plug 'sheerun/vim-polyglot'
 " Text object for function arguments
 Plug 'vim-scripts/argtextobj.vim'
 
+" Displays available key bindings
+Plug 'liuchengxu/vim-which-key'
+
+" Indent lines
+Plug 'Yggdroot/indentLine'
 
 " let Vundle manage Vundle, required
 call plug#end()
 
-source ~/.config/nvim/vimrcs/basic.vim
-source ~/.config/nvim/vimrcs/my_configs.vim
-source ~/.config/nvim/vimrcs/extended.vim
+source ~/.config/nvim/vimrcs/settings.vim
+source ~/.config/nvim/themes/airline.vim
+source ~/.config/nvim/vimrcs/mappings.vim
+source ~/.config/nvim/vimrcs/commands.vim
 source ~/.config/nvim/vimrcs/plugins_config.vim
+
+
+" Plugins
+source ~/.config/nvim/vimrcs/coc.vim
+source ~/.config/nvim/vimrcs/plugins.vim
