@@ -1,32 +1,76 @@
 {
-  "coc": {
-    "preferences": {
-      "formatOnSaveFiletypes": ["python", "json", "css", "Markdown", "javascript", "javascriptreact", "typescript", "typescriptreact"],
-      "diagnostic": {
-        "displayByAle": false,
-        "enable": true
-      }
+  // diagnostics
+  "diagnostic.errorSign": " ",
+  "diagnostic.warningSign": " ",
+  "diagnostic.infoSign": "",
+  "diagnostic.hintSign": " ",
+  "diagnostic.virtualText": true, // this won't work with codelens when error on same line
+
+  // preferences
+  "coc.preferences.hoverTarget": "float",
+  "coc.preferences.formatOnSaveFiletypes": [
+    "css",
+    "markdown",
+    "javascript",
+    "javascriptreact",
+    "typescript",
+    "typescriptreact",
+    "graphql",
+    "html",
+    "yaml",
+    "json",
+    "python"
+  ],
+
+  // Suggest
+  "suggest.autoTrigger": "always",
+  "suggest.snippetIndicator": "►",
+  "suggest.timeout": 500,
+  "suggest.completionItemKindLabels": {
+    "text": "t",
+    "method": "m",
+    "function": ""
+  },
+
+  // list
+  "list.indicator": ">",
+  "list.selectedSignText": " ",
+
+  // Python
+  "python.pythonPath": "python",
+  "python.linting.enabled": true,
+  "python.linting.mypyEnabled": false,
+  "python.linting.pydocstyleEnabled": false,
+  "python.formatting.provider": "black",
+  "python.formatting.blackArgs": ["-l", "120"],
+  "python.venvFolders": ["envs", ".pyenv", ".direnv", ".virtualenvs"],
+  "python.venvPath": "~/.virtualenvs",
+
+  // emmet
+  "emmet.includeLanguages": {
+    "vue-html": "html",
+    "javascript": "javascriptreact"
+  },
+
+  // html
+  "html.enable": true,
+
+  // Lang servers
+  "languageserver": {
+    "bash": {
+      "command": "bash-language-server",
+      "args": ["start"],
+      "filetypes": ["sh"],
+      "ignoredRootPaths": ["~"]
     }
   },
-  "suggest": {
-    "autoTrigger": "always",
-    "snippetIndicator": "►",
-    "timeout": 500
-  },
-  "python": {
-    "linting": {
-      "enabled": true,
-      "mypyEnabled": false,
-      "setLinter": "flake8",
-      "pydocstyleEnabled": false
-    },
-    "formatting": {
-      "provider": "black",
-      "blackArgs": ["-l", "120"]
-    },
-    "pythonPath": "/usr/bin/python3.7"
-  },
-  "html": {
-    "enable": true
+
+  // explorer
+  "explorer.width": 30,
+  "explorer.icon.enableNerdfont": true,
+  "explorer.previewAction.onHover": false,
+  "explorer.keyMappings": {
+    "<cr>": ["expandable?", "expand", "open"],
+    "v": "open:vsplit"
   }
 }
