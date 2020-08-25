@@ -72,7 +72,7 @@ Plug 'junegunn/fzf'
 Plug 'junegunn/fzf.vim'
 
 " Async linting
-Plug 'dense-analysis/ale'
+" Plug 'dense-analysis/ale'
 
 " Python sense
 Plug 'jeetsukumaran/vim-pythonsense'

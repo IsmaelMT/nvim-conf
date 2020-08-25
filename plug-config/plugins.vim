@@ -30,6 +30,6 @@ set statusline+=%{gutentags#statusline()}\ %{StatusDiagnostic()}
 " => Indent lines
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:indentLine_enabled = 1
-let g:indentLine_char = '|'
+let g:indentLine_char = '│'
 
 noremap zz :IndentLinesToggle<CR>
