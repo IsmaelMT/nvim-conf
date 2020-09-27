@@ -105,6 +105,10 @@ Plug 'Yggdroot/indentLine'
 
 " Ranger integration
 Plug 'kevinhwang91/rnvimr', {'do': 'make sync'}
+
+" Fast code minimap
+Plug 'wfxr/minimap.vim', {'do': ':!cargo install --locked code-minimap'}
+
 " let Vundle manage Vundle, required
 call plug#end()
 

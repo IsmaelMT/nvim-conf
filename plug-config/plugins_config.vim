@@ -289,3 +289,12 @@ let g:gutentags_ctags_exclude = [
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 map <F3>   : ImportName<CR>
 map <C-F3> : ImportNameHere<CR>
+
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" minimap
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+map <F6> : MinimapToggle<CR>
+let g:minimap_auto_start = 1
+let g:minimap_width = 10
+let g:minimap_highlight = "DiffAdd"
