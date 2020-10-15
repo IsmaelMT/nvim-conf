@@ -109,6 +109,9 @@ Plug 'kevinhwang91/rnvimr', {'do': 'make sync'}
 " Fast code minimap
 Plug 'wfxr/minimap.vim', {'do': ':!cargo install --locked code-minimap'}
 
+" Code screenshot
+Plug 'jmckiern/vim-shoot', { 'do': '\"./install.py\" geckodriver' }
+
 " let Vundle manage Vundle, required
 call plug#end()
 
