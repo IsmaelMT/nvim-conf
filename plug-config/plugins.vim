@@ -24,8 +24,9 @@ function! StatusDiagnostic() abort
 endfunction
 
 " Format the status line (I'm using airline so this won't apply much)
-set statusline=\ %{HasPaste()}%F%m%r%h\ %w\ \ CWD:\ %r%{getcwd()}%h\ \ \ Line:\ %l\ \ Column:\ %c
-set statusline+=%{gutentags#statusline()}\ %{StatusDiagnostic()}
+" set statusline^=%{coc#status()}
+" set statusline=\ %{HasPaste()}%F%m%r%h\ %w\ \ CWD:\ %r%{getcwd()}%h\ \ \ Line:\ %l\ \ Column:\ %c
+" set statusline+=%{gutentags#statusline()}\ %{StatusDiagnostic()}
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Indent lines
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
