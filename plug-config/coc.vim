@@ -36,9 +36,9 @@ inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
 " Or use `complete_info` if your vim support it, like:
 " inoremap <expr> <cr> complete_info()["selected"] != "-1" ? "\<C-y>" : "\<C-g>u\<CR>"
 
-" Use `[g` and `]g` to navigate diagnostics
-nmap <silent> [g <Plug>(coc-diagnostic-prev)
-nmap <silent> ]g <Plug>(coc-diagnostic-next)
+" Use `ctrl+k` and `ctrl+j` to navigate diagnostics
+nmap <silent> ]g <Plug>(coc-diagnostic-next-error)
+nmap <silent> [g <Plug>(coc-diagnostic-prev-error)
 
 " Remap keys for gotos
 nmap <silent> gd <Plug>(coc-definition)
@@ -125,7 +125,7 @@ nnoremap <silent> <space>p  :<C-u>CocListResume<CR>
 let g:coc_global_extensions = [
   \'coc-emoji', 'coc-eslint', 'coc-prettier',
   \'coc-tsserver', 'coc-tslint', 'coc-tslint-plugin',
-  \'coc-css', 'coc-json', 'coc-yaml', 'coc-python',
+  \'coc-css', 'coc-json', 'coc-yaml', 'coc-pyright',
   \'coc-snippets', 'coc-html', 'coc-vimlsp', 'coc-emmet',
   \'coc-explorer'
 \]
