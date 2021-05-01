@@ -34,3 +34,8 @@ let g:indentLine_enabled = 1
 let g:indentLine_char = '│'
 
 noremap zz :IndentLinesToggle<CR>
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Riv
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+let g:riv_disable_folding = 1

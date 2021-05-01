@@ -140,6 +140,8 @@ let g:mkdp_port = ''
 " ${name} will be replace with the file name
 let g:mkdp_page_title = '「${name}」'
 
+" Disable abbreviations
+let g:markdown_enable_input_abbreviations = 0
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Tagbar
@@ -298,3 +300,9 @@ map <F6> : MinimapToggle<CR>
 let g:minimap_auto_start = 1
 let g:minimap_width = 10
 let g:minimap_highlight = "PMenu"
+
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" indentLine
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+let g:indentLine_conceallevel = 0

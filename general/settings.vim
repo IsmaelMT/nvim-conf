@@ -55,6 +55,8 @@ set noswapfile                          " Deactivate the .swp files
 set shellpipe=>                         " Fix ack blink
 set guifont=Hack\ 16
 set spelllang=en_us
+set nofoldenable
+set mmp=5000                            " Set maxmempattern
 highlight clear SignColumn "Remove highlight in the sign column
 
 
@@ -77,7 +79,6 @@ augroup SyntaxSettings
 augroup END
 
 au! BufWritePost $MYVIMRC source % " auto source when writing to init.vm alternatively you can run :source $MYVIMRC
-
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Turn persistent undo on 

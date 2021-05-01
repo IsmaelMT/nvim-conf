@@ -41,8 +41,10 @@ Plug 'tpope/vim-obsession'
 " Vim wiki. Use with <Leader>ww
 " And to see the markdown result use <Leader>md
 Plug 'vimwiki/vimwiki'
-Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app & yarn install'  }
-" Plug 'suan/vim-instant-markdown', {'for': 'markdown'}
+Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
+
+" Rst visualization
+Plug 'Rykka/riv.vim'
 
 " Status line configuration
 Plug 'vim-airline/vim-airline'
