@@ -38,7 +38,7 @@
   "list.selectedSignText": " ",
 
   // Python
-  "python.pythonPath": "python",
+  "python.pythonPath": "~/.pyenv/versions/3.8.5/bin/python3.8",
   "python.jediEnabled": false,
   "python.linting.enabled": true,
   "python.linting.mypyEnabled": true,
@@ -74,5 +74,7 @@
   "explorer.keyMappings.global": {
     "<cr>": ["expandable?", "expand", "open"],
     "v": "open:vsplit"
-  }
+  },
+  // tsserver
+  "tsserver.npm": "/usr/local/bin/npm"
 }
