@@ -37,15 +37,19 @@
   "list.indicator": ">",
   "list.selectedSignText": " ",
 
-  // Python
-  "python.jediEnabled": false,
+  // pyright
+  "python.analysis.autoImportCompletions": true,
+  "python.pythonPath": "python3",
+  "python.formatting.provider": "black",
+  "python.formatting.blackArgs": ["-l", "120"],
+  "python.formatting.blackPath": "~/.pyenv/shims/black",
   "python.linting.enabled": true,
   "python.linting.mypyEnabled": true,
   "python.linting.pydocstyleEnabled": false,
-  "python.formatting.provider": "black",
-  "python.formatting.blackArgs": ["-l", "120"],
   "python.venvFolders": ["envs", ".pyenv", ".direnv", ".virtualenvs"],
   "python.venvPath": "~/.virtualenvs",
+  "python.sortImports.path": "isort",
+  "python.formatting.blackPath": "/Users/imendonca/.pyenv/shims/isort",
 
   // emmet
   "emmet.includeLanguages": {
