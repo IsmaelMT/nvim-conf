@@ -38,7 +38,6 @@
   "list.selectedSignText": " ",
 
   // Python
-  "python.pythonPath": "~/.pyenv/versions/3.8.5/bin/python3.8",
   "python.jediEnabled": false,
   "python.linting.enabled": true,
   "python.linting.mypyEnabled": true,

@@ -59,7 +59,6 @@ set nofoldenable
 set mmp=5000                            " Set maxmempattern
 highlight clear SignColumn "Remove highlight in the sign column
 
-
 "" Ignore compiled files
 set wildignore=*.o,*~,*.pyc
 if has("win16") || has("win32")
@@ -79,6 +78,9 @@ augroup SyntaxSettings
 augroup END
 
 au! BufWritePost $MYVIMRC source % " auto source when writing to init.vm alternatively you can run :source $MYVIMRC
+
+" Python host
+let g:python3_host_prog = '~/.pyenv/versions/3.9.0/bin/python3'
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Turn persistent undo on 
