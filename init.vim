@@ -12,6 +12,5 @@ source $HOME/.config/nvim/general/commands.vim
 
 " Plugins
 source $HOME/.config/nvim/plug-config/coc.vim
-source $HOME/.config/nvim/plug-config/plugins.vim
 source $HOME/.config/nvim/plug-config/plugins_config.vim
 source $HOME/.config/nvim/plug-config/rnvimr.vim
