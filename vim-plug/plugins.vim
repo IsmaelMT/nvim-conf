@@ -78,17 +78,12 @@ Plug 'junegunn/fzf.vim'
 
 " Python sense
 Plug 'jeetsukumaran/vim-pythonsense'
-" Plug 'dbsr/vimpy'
-Plug 'mgedmin/python-imports.vim'
 
 " Search and edit
 Plug 'dyng/ctrlsf.vim'
 
 " Code completion
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
-
-" Python black
-Plug 'psf/black'
 
 " Vim tabular
 Plug 'godlygeek/tabular'
