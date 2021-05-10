@@ -46,10 +46,7 @@
   "python.linting.enabled": true,
   "python.linting.mypyEnabled": true,
   "python.linting.pydocstyleEnabled": false,
-  "python.venvFolders": ["envs", ".pyenv", ".direnv", ".virtualenvs"],
-  "python.venvPath": "~/.virtualenvs",
   "python.sortImports.path": "isort",
-  "python.formatting.blackPath": "/Users/imendonca/.pyenv/shims/isort",
 
   // emmet
   "emmet.includeLanguages": {
