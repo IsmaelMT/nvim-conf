@@ -82,6 +82,15 @@ au! BufWritePost $MYVIMRC source % " auto source when writing to init.vm alterna
 " Python host
 let g:python3_host_prog = '~/.pyenv/versions/3.9.0/bin/python3'
 
+"Line numbering
+:set number relativenumber
+
+:augroup numbertoggle
+:  autocmd!
+:  autocmd BufEnter,FocusGained,InsertLeave * set relativenumber
+:  autocmd BufLeave,FocusLost,InsertEnter   * set norelativenumber
+:augroup END
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Turn persistent undo on 
 "    means that you can undo even when you close a buffer/VIM
