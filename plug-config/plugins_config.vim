@@ -45,7 +45,7 @@ let g:vimwiki_list = [{
 \ 'path': '~/vimwiki/', 
 \ 'path_html': '~/vimwiki_html/', 
 \ 'auto_export': 1,
-\ 'syntax': 'markdown', 'ext': '.wiki'}]
+\ 'syntax': 'markdown', 'ext': '.md'}]
 
 
 
@@ -284,7 +284,8 @@ let g:gutentags_ctags_exclude = [
 \  '*.bmp', '*.gif', '*.ico', '*.jpg', '*.png', '*.svg',
 \  '*.rar', '*.zip', '*.tar', '*.tar.gz', '*.tar.xz', '*.tar.bz2',
 \  '*.pdf', '*.doc', '*.docx', '*.ppt', '*.pptx', '*.xls',
-\  '*.vim'
+\  '*.vim',
+\  '*.json'
 \]
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
