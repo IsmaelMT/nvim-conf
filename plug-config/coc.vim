@@ -178,5 +178,7 @@ nmap <space>f :CocCommand explorer --preset floating<CR>
 autocmd BufEnter * if (winnr("$") == 1 && &filetype == 'coc-explorer') | q | endif
 
 " Python configs
-au FileType python let b:coc_root_patterns = ['.git', '.env', 'venv', '.venv', 'setup.cfg', 'setup.py', 'pyrightconfig.json', 'env', 'wsgi.py']
+au FileType python let b:coc_root_patterns = [
+      \ '.git', '.env', 'venv', '.venv', 'setup.cfg', 'setup.py', 
+      \ 'pyrightconfig.json', 'env', 'wsgi.py']
 nmap <leader>i :CocCommand python.sortImports<CR>
