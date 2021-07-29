@@ -41,8 +41,6 @@
   "python.analysis.autoImportCompletions": true,
   "python.pythonPath": "python3",
   "python.formatting.provider": "black",
-  "python.formatting.blackArgs": ["-l", "120"],
-  "python.formatting.blackPath": "~/.pyenv/shims/black",
   "python.linting.enabled": true,
   "python.linting.mypyEnabled": true,
   "python.linting.pydocstyleEnabled": false,
